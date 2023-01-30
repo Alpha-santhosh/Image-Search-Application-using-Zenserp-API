@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+}
+body{
+    background-color: white;
+    overflow: hidden;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.header_fixed{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    padding: 10px;
+    /* position: fixed;
+    z-index: 5; */
+}
+
+.nav{
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #303134;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: #202023;
+    /* margin-bottom: 25px; */
+}
+
+.nav:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#key{
+    width: 100%;
+    border: none;
+    outline: 0;
+    height: 100%;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#title{
+    margin-bottom: 25px;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    margin-right:10px ;
+}
+
+.btn:hover{
+    background-color: #202023;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.gallary{
+    columns: 4 200px;
+    /* background-color: black; */
+    width: 95%;
+    margin: auto;
+    padding: 20px;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
+}
+
+.img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.gallary_right{
+    columns: 3 180px;
+    margin: 1%;
+}
+
+.detail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.detail:hover{
+    background-color: rgba(0, 0, 0, 0.381);
+    opacity: 1;
+}
+
+a{
+    color: white;
+}
+
+.see_more_box{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#see_more{
+    color: black;
+    padding: 5px 10px;
+    background-color: rgba(0, 119, 255, 0.416);
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.holder{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #242424;
+}
+
+.img_holder_css{
+    width: 50vw;
+    height: 100vh;
+    background-color: black;
+    padding: 20px;
+    overflow: scroll;
+}
+
+#main{
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.home{
+    background-color: black;
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 5;
+    font-size: 18px;
+    transition: 0.5s ease-in-out;
+}
+.home:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media all and (max-width:700px) {
+    #title{
+        font-size: 22px;
+    }
+    .nav{
+        max-width: 300px;
+    }
+}
+
+@media all and (max-width:280px) {
+    #title{
+        font-size: 16px;
+    }
+    .nav{
+        max-width: 200px;
+    }
+}
+
+@media all and (max-width:415px) {
+    .home{
+        background-color: black;
+        color: white;
+        padding: 2px 6px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        position: absolute;
+        top: 17px;
+        left: 9px;
+        z-index: 5;
+        font-size: 12px;
+        transition: 0.5s ease-in-out;
+    }
+}
+
+@media all and (max-width:390px) {
+    .home{
+        background-color: black;
+        color: white;
+        padding: 2px 6px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        position: absolute;
+        top: 15px;
+        left: 5px;
+        z-index: 5;
+        font-size: 12px;
+        transition: 0.5s ease-in-out;
+    }
+}
+@media all and (max-width:380px) {
+    .home{
+        background-color: black;
+        color: white;
+        padding: 2px 3px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        position: absolute;
+        top: 15px;
+        left: 4px;
+        z-index: 5;
+        font-size: 10px;
+        transition: 0.5s ease-in-out;
+    }
+}
+
+@media all and (max-width:370px) {
+    .home{
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        position: absolute;
+        top: 70px;
+        left: 4px;
+        z-index: 5;
+        font-size: 10px;
+        transition: 0.5s ease-in-out;
+    }
+}
+
+@media all and (max-width:710px) {
+    .gallary{
+        columns: 3 100px;
+    }
+}
+
+@media all and (max-width:610px) {
+    .gallary{
+        columns: 2 100px;
+    }
+}
+
+@media all and (max-width:540px) {
+    .gallary{
+        columns: 2 100px;
+    }
+}
+
+@media all and (max-width:540px) {
+    .gallary{
+        columns: 2 100px;
+    }
+}
+
+@media all and (max-width:375px) {
+    .img_holder_css{
+        /* width: 0vw;
+        margin: 0;
+        padding: 0; */
+        width: 50%;
+    }
+    .gallary{
+        columns: 3 100px;
+        color: 0;
+    }
+    .card{
+        content: "";
+    }
+    .gallary_right{
+        columns: 3 50px;
+        margin: 1%;
+    }
+    a{
+        font-size: 12px;
+    }
+    
+    #see_more{
+        color: black;
+        padding: 3px 5px;
+        background-color: rgba(0, 119, 255, 0.416);
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+}

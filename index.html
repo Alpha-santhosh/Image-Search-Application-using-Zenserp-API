@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search Application using Zenserp API</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- <script src="tiger_data.js" defer></script> -->
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <header class="header" id="header">
+        <h1 id="title">Image Search Application using Zenserp API</h1>
+        <nav class="nav">
+            <input type="text" id="key" placeholder="Type a word">
+            <button class="btn" type="button" onclick="check_for_key()"><span class="material-symbols-outlined">
+        search
+        </span>
+            </button>
+        </nav>
+    </header>
+    <div class="holder" id="screen_holder">
+        <main id="main">
+            <div id="gallary">
+            </div>
+            <div class="see_more_box" id="see_more_box">
+                <a href="" id="see_more">see more</a>
+            </div>
+        </main>
+    </div>
+
+    <template>
+        <div class="card">
+            <img class="img" src="${data[i].thumbnail}" alt="${data[i].position}">
+            <div class="detail">
+                <a href="${data[i].source}" target="_blank" >${data[i].source}</a>
+                <a href="${data[i].link}" target="_blank" >${data[i].title}</a>
+            </div>
+        </div>
+    </template>
+</body>
+</html>
